@@ -1,7 +1,7 @@
 
 <resources>
     <string name="app_name">小銭最適化</string>
-    <string name="button">Button</string>
+    <string name="button">計算</string>
     <string name="hint">input</string>
     <string name="sheet">枚</string>
     <string name="yen">円</string>

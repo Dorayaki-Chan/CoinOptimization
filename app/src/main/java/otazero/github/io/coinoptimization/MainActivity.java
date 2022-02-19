@@ -5,31 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
         import android.widget.Button;
         import android.widget.EditText;
         import android.widget.TextView;
+        import android.text.TextWatcher;
+        import android.text.Editable;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements TextWatcher{
 
     /* example */
-    private EditText editText;
-    private TextView textView;
+
 
     /* My create */
-    /*
-    private EditText editTextYukichi;
-    private EditText editTextIchiyo;
-    private EditText editTextShurei;
-    private EditText editTextHideyo;
-    private EditText editTextGomarumaru;
-    private EditText editTextHitomarumaru;
-    private EditText editTextGomaru;
-    private EditText editTextHitomaru;
-    private EditText editTextGo;
-    private EditText editTextHito;
-    */
     private EditText[] editTextHenkan = new EditText[10];
     private EditText kaikei;
 
     private TextView[] textViewKaikei = new TextView[10];
     private TextView textViewTsuri;
+    private TextView textViewShoji;
 
     //通貨
     private int[] tmpKahei = {10000, 5000, 2000, 1000, 500, 100, 50, 10, 5, 1};
@@ -42,23 +33,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         /* example */
-        editText = findViewById(R.id.edit_text);
-        textView = findViewById(R.id.text_view);
         Button button = findViewById(R.id.button);
 
         /* My create */
-        /*
-        editTextYukichi = findViewById(R.id.editTextNumber_Yukichi);
-        editTextIchiyo = findViewById(R.id.editTextNumber_Ichiyo);
-        editTextShurei = findViewById(R.id.editTextNumber_Shurei);
-        editTextHideyo = findViewById(R.id.editTextNumber_Hideyo);
-        editTextGomarumaru = findViewById(R.id.editTextNumber_Gomarumaru);
-        editTextHitomarumaru = findViewById(R.id.editTextNumber_Hitomarumaru);
-        editTextGomaru = findViewById(R.id.editTextNumber_Gomaru);
-        editTextHitomaru = findViewById(R.id.editTextNumber_Hitomaru);
-        editTextGo = findViewById(R.id.editTextNumber_Go);
-        editTextHito = findViewById(R.id.editTextNumber_Hito);
-        */
         editTextHenkan[0] = findViewById(R.id.editTextNumber_Yukichi);
         editTextHenkan[1] = findViewById(R.id.editTextNumber_Ichiyo);
         editTextHenkan[2] = findViewById(R.id.editTextNumber_Shurei);
@@ -83,29 +60,20 @@ public class MainActivity extends AppCompatActivity {
         textViewKaikei[9] = findViewById(R.id.text_view_sheet_Hito);
 
         textViewTsuri = findViewById(R.id.textView_tsuri);
+        textViewShoji = findViewById(R.id.text_view_shoji);
+
+        //随時更新
+        for (int i = 0; i < tmpKahei.length; i++){
+            editTextHenkan[i].addTextChangedListener(this);
+        }
+
 
         /* ボタンが押されたら */
         button.setOnClickListener( v-> {
 
             /* example */
-            // エディットテキストのテキストを取得
-            String text = editText.getText().toString();
-            // 取得したテキストを TextView に張り付ける
-            textView.setText(text);
 
             /* My create */
-            /*
-            String strYukichi = editTextYukichi.getText().toString();
-            String strIchiyo = editTextIchiyo.getText().toString();
-            String strShurei = editTextShurei.getText().toString();
-            String strHideyo = editTextHideyo.getText().toString();
-            String strGomarumaru = editTextGomarumaru.getText().toString();
-            String strHitomarumaru = editTextHitomarumaru.getText().toString();
-            String strGomaru = editTextGomaru.getText().toString();
-            String strHitomaru = editTextHitomaru.getText().toString();
-            String strGo = editTextGo.getText().toString();
-            String strHito = editTextHito.getText().toString();
-            */
             String strkaikei = kaikei.getText().toString();
             int numkaikei = 0;
             if (strkaikei.length() > 0) {
@@ -128,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 sumA += shugoA[i] * tmpKahei[i];
             }
+
 
             //集合B
             int sumB = sumA - numkaikei;
@@ -157,19 +126,43 @@ public class MainActivity extends AppCompatActivity {
                 textViewKaikei[i].setText(String.valueOf(shugoA01[i]));
             }
             textViewTsuri.setText(String.valueOf(otsuri));
-
-            /*
-            int numYukichi = Integer.parseInt(strYukichi);
-            int numShurei = Integer.parseInt(strShurei);
-            int numHideyo = Integer.parseInt(strHideyo);
-            int numGomarumaru = Integer.parseInt(strGomarumaru);
-            int numHitomarumaru = Integer.parseInt(strHitomarumaru);
-            int numGomaru = Integer.parseInt(strGomaru);
-            int numHitomaru = Integer.parseInt(strHitomaru);
-            int numGo = Integer.parseInt(strGo);
-            int numHito = Integer.parseInt(strHito);
-            */
-
         });
+    }
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+    }
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+    }
+    @Override
+    public void afterTextChanged(Editable s) {
+        // テキスト変更後に変更されたテキストを取り出す
+        /*String inputStr= s.toString();*/
+
+        // 文字長をカウントして８文字を超えると「オーバー」とする
+        /*
+        if(inputStr.length() >8){
+            String str = inputStr +" 文字数オーバー";
+            textViewShoji.setText(str);
+        }
+        else{
+            textViewShoji.setText(inputStr);
+        }
+
+         */
+        int sumA = 0;
+        String[] strHenkan = new String[10];
+        int shugoA[] = new int[10];
+        for (int i = 0; i < editTextHenkan.length; i++){
+            strHenkan[i] = editTextHenkan[i].getText().toString();
+            if (strHenkan[i].length() > 0) {
+                shugoA[i] = Integer.parseInt(strHenkan[i]);
+            }
+            else{
+                shugoA[i] = 0;
+            }
+            sumA += shugoA[i] * tmpKahei[i];
+        }
+        textViewShoji.setText(String.valueOf(sumA));
     }
 }
