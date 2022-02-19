@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dfe"
+    tools:context=".MainActivity">
+
+    <!-- Example(始) -->
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:hint="......."
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.801" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/hint"
+        android:background="#ffffff"
+        android:hint="@string/hint"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.865" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.971" />
+
+    <!-- Example(終) -->
+
+    <!-- 財布ヘッダー(始) -->
+
+    <TextView
+        android:id="@+id/text_view_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="財布内"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_2"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="所持金:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_1"
+        app:layout_constraintStart_toEndOf="@+id/text_view_1" />
+
+    <!-- ここのテキスト(text)は可変 -->
+    <TextView
+        android:id="@+id/text_view_shoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="10000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_2"
+        app:layout_constraintStart_toEndOf="@+id/text_view_2" />
+
+    <TextView
+        android:id="@+id/text_view_3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/yen"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_shoji"
+        app:layout_constraintStart_toEndOf="@+id/text_view_shoji" />
+
+    <!-- 財布ヘッダー(終) -->
+
+    <!-- 財布内の貨幣名(始) -->
+
+    <TextView
+        android:id="@+id/text_view_4"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="24dp"
+        android:text="諭吉さん"
+        app:layout_constraintStart_toStartOf="@+id/text_view_1"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_1" />
+
+    <TextView
+        android:id="@+id/text_view_5"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="20dp"
+        android:text="一葉さん"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_4"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_4" />
+
+    <TextView
+        android:id="@+id/text_view_6"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="20dp"
+        android:text="守礼門"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_5"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_5" />
+
+    <TextView
+        android:id="@+id/text_view_7"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="20dp"
+        android:text="英世さん"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_6"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_6" />
+
+    <TextView
+        android:id="@+id/text_view_8"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="20dp"
+        android:text="500円玉"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_7"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_7" />
+
+    <TextView
+        android:id="@+id/text_view_9"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="20dp"
+        android:text="100円玉"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_8"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_8" />
+
+    <TextView
+        android:id="@+id/text_view_10"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="20dp"
+        android:text="50円玉"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_9"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_9" />
+
+    <TextView
+        android:id="@+id/text_view_11"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="20dp"
+        android:text="10円玉"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_10"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_10" />
+
+    <TextView
+        android:id="@+id/text_view_12"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="20dp"
+        android:text="5円玉"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_11"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_11" />
+
+    <TextView
+        android:id="@+id/text_view_13"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="20dp"
+        android:text="1円玉"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_12"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_12" />
+    <!-- 財布内の貨幣名(終) -->
+
+
+    <!-- 財布内エディタ(始) -->
+
+    <EditText
+        android:id="@+id/editTextNumber_Yukichi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:ems="5"
+        android:hint="@string/sheet"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_4"
+        app:layout_constraintStart_toEndOf="@+id/text_view_4" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Ichiyo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="@string/sheet"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_5"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber_Yukichi" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Shurei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="@string/sheet"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_6"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber_Ichiyo" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Hideyo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="@string/sheet"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_7"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber_Shurei" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Gomarumaru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="@string/sheet"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_8"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber_Hideyo" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Hitomarumaru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="@string/sheet"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_9"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber_Gomarumaru" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Gomaru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="@string/sheet"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_10"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber_Hitomarumaru" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Hitomaru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="@string/sheet"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_11"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber_Gomaru" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="@string/sheet"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_12"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber_Hitomaru" />
+
+    <EditText
+        android:id="@+id/editTextNumber_Hito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:hint="@string/sheet"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_13"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber_Go" />
+    <!-- 財布内エディタ(終) -->
+
+    <!-- 会計ヘッダー(始) -->
+
+    <TextView
+        android:id="@+id/text_view_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="レジ"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_3"
+        app:layout_constraintStart_toEndOf="@+id/text_view_3" />
+
+    <TextView
+        android:id="@+id/text_view_21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="お会計:"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_20"
+        app:layout_constraintStart_toEndOf="@+id/text_view_20" />
+
+
+    <EditText
+        android:id="@+id/editTextNumber_Kaikei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:ems="5"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_21"
+        app:layout_constraintStart_toEndOf="@+id/text_view_21" />
+
+    <TextView
+        android:id="@+id/text_view_22"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:text="@string/yen"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Kaikei"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumber_Kaikei" />
+
+    <!-- 会計ヘッダー(終) -->
+
+    <!-- 会計ユニット(始) -->
+
+    <TextView
+        android:id="@+id/text_view_sheet_Yukichi"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="32dp"
+        android:text="00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Yukichi"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumber_Yukichi" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Ichiyo"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:text="00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Ichiyo"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Yukichi" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Shurei"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:text="00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Shurei"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Ichiyo" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Hideyo"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:text="00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Hideyo"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Shurei" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Gomarumaru"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:text="00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Gomarumaru"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Hideyo" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Hitomarumaru"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:text="00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Hitomarumaru"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Gomarumaru" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Gomaru"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:text="00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Gomaru"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Hitomarumaru" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Hitomaru"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:text="00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Hitomaru"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Gomaru" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Go"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:text="00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Go"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Hitomaru" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Hito"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:text="00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Hito"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Go" />
+    <!-- 会計ユニット(終) -->
+
+
+    <!-- 会計"枚"表記(始) -->
+    <TextView
+        android:id="@+id/text_view_sheet_Yukichi2"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/sheet"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Yukichi"
+        app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Yukichi" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Yukichi3"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/sheet"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Ichiyo"
+        app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Ichiyo" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Yukichi4"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/sheet"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Shurei"
+        app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Shurei" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Yukichi5"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/sheet"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Hideyo"
+        app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Hideyo" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Yukichi6"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/sheet"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Gomarumaru"
+        app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Gomarumaru" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Yukichi7"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/sheet"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Hitomarumaru"
+        app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Hitomarumaru" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Yukichi8"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/sheet"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Gomaru"
+        app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Gomaru" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Yukichi9"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/sheet"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Hitomaru"
+        app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Hitomaru" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Yukichi10"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/sheet"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Go"
+        app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Go" />
+
+    <TextView
+        android:id="@+id/text_view_sheet_Yukichi11"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/sheet"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Hito"
+        app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Hito" />
+    <!-- 会計"枚"表記(終) -->
+    <!-- おつり(始) -->
+    <TextView
+        android:id="@+id/text_view_17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="おつり:"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_21"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_21" />
+
+    <TextView
+        android:id="@+id/textView_tsuri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="555"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_17"
+        app:layout_constraintStart_toEndOf="@+id/text_view_17" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yen"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_tsuri"
+        app:layout_constraintStart_toEndOf="@+id/textView_tsuri" />
+    <!-- おつり(終) -->
+
+    android:background="@color/colorPrimaryDark"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
