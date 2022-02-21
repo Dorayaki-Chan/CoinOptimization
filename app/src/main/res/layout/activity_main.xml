@@ -33,6 +33,7 @@
         android:layout_marginTop="16dp"
         android:text="財布内"
         android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="所持金:"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_1"
         app:layout_constraintStart_toEndOf="@+id/text_view_1" />
 
@@ -52,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="0"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_2"
         app:layout_constraintStart_toEndOf="@+id/text_view_2" />
 
@@ -61,6 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="@string/yen"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_shoji"
         app:layout_constraintStart_toEndOf="@+id/text_view_shoji" />
 
@@ -74,6 +78,7 @@
         android:layout_height="19dp"
         android:layout_marginTop="24dp"
         android:text="諭吉さん"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/text_view_1"
         app:layout_constraintTop_toBottomOf="@+id/text_view_1" />
 
@@ -83,6 +88,7 @@
         android:layout_height="19dp"
         android:layout_marginTop="20dp"
         android:text="一葉さん"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/text_view_4"
         app:layout_constraintTop_toBottomOf="@+id/text_view_4" />
 
@@ -92,6 +98,7 @@
         android:layout_height="19dp"
         android:layout_marginTop="20dp"
         android:text="守礼門"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/text_view_5"
         app:layout_constraintTop_toBottomOf="@+id/text_view_5" />
 
@@ -101,6 +108,7 @@
         android:layout_height="19dp"
         android:layout_marginTop="20dp"
         android:text="英世さん"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/text_view_6"
         app:layout_constraintTop_toBottomOf="@+id/text_view_6" />
 
@@ -110,6 +118,7 @@
         android:layout_height="19dp"
         android:layout_marginTop="20dp"
         android:text="500円玉"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/text_view_7"
         app:layout_constraintTop_toBottomOf="@+id/text_view_7" />
 
@@ -119,6 +128,7 @@
         android:layout_height="19dp"
         android:layout_marginTop="20dp"
         android:text="100円玉"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/text_view_8"
         app:layout_constraintTop_toBottomOf="@+id/text_view_8" />
 
@@ -128,6 +138,7 @@
         android:layout_height="19dp"
         android:layout_marginTop="20dp"
         android:text="50円玉"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/text_view_9"
         app:layout_constraintTop_toBottomOf="@+id/text_view_9" />
 
@@ -137,6 +148,7 @@
         android:layout_height="19dp"
         android:layout_marginTop="20dp"
         android:text="10円玉"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/text_view_10"
         app:layout_constraintTop_toBottomOf="@+id/text_view_10" />
 
@@ -146,6 +158,7 @@
         android:layout_height="19dp"
         android:layout_marginTop="20dp"
         android:text="5円玉"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/text_view_11"
         app:layout_constraintTop_toBottomOf="@+id/text_view_11" />
 
@@ -155,6 +168,7 @@
         android:layout_height="19dp"
         android:layout_marginTop="20dp"
         android:text="1円玉"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/text_view_12"
         app:layout_constraintTop_toBottomOf="@+id/text_view_12" />
     <!-- 財布内の貨幣名(終) -->
@@ -167,9 +181,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:ems="5"
+        android:ems="2"
         android:hint="@string/sheet"
         android:inputType="number"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_4"
         app:layout_constraintStart_toEndOf="@+id/text_view_4" />
 
@@ -177,9 +192,10 @@
         android:id="@+id/editTextNumber_Ichiyo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="5"
+        android:ems="2"
         android:hint="@string/sheet"
         android:inputType="number"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_5"
         app:layout_constraintStart_toStartOf="@+id/editTextNumber_Yukichi" />
 
@@ -187,9 +203,10 @@
         android:id="@+id/editTextNumber_Shurei"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="5"
+        android:ems="2"
         android:hint="@string/sheet"
         android:inputType="number"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_6"
         app:layout_constraintStart_toStartOf="@+id/editTextNumber_Ichiyo" />
 
@@ -197,9 +214,10 @@
         android:id="@+id/editTextNumber_Hideyo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="5"
+        android:ems="2"
         android:hint="@string/sheet"
         android:inputType="number"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_7"
         app:layout_constraintStart_toStartOf="@+id/editTextNumber_Shurei" />
 
@@ -207,9 +225,10 @@
         android:id="@+id/editTextNumber_Gomarumaru"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="5"
+        android:ems="2"
         android:hint="@string/sheet"
         android:inputType="number"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_8"
         app:layout_constraintStart_toStartOf="@+id/editTextNumber_Hideyo" />
 
@@ -217,9 +236,10 @@
         android:id="@+id/editTextNumber_Hitomarumaru"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="5"
+        android:ems="2"
         android:hint="@string/sheet"
         android:inputType="number"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_9"
         app:layout_constraintStart_toStartOf="@+id/editTextNumber_Gomarumaru" />
 
@@ -227,9 +247,10 @@
         android:id="@+id/editTextNumber_Gomaru"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="5"
+        android:ems="2"
         android:hint="@string/sheet"
         android:inputType="number"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_10"
         app:layout_constraintStart_toStartOf="@+id/editTextNumber_Hitomarumaru" />
 
@@ -237,9 +258,10 @@
         android:id="@+id/editTextNumber_Hitomaru"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="5"
+        android:ems="2"
         android:hint="@string/sheet"
         android:inputType="number"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_11"
         app:layout_constraintStart_toStartOf="@+id/editTextNumber_Gomaru" />
 
@@ -247,9 +269,10 @@
         android:id="@+id/editTextNumber_Go"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="5"
+        android:ems="2"
         android:hint="@string/sheet"
         android:inputType="number"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_12"
         app:layout_constraintStart_toStartOf="@+id/editTextNumber_Hitomaru" />
 
@@ -257,9 +280,10 @@
         android:id="@+id/editTextNumber_Hito"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="5"
+        android:ems="2"
         android:hint="@string/sheet"
         android:inputType="number"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_13"
         app:layout_constraintStart_toStartOf="@+id/editTextNumber_Go" />
     <!-- 財布内エディタ(終) -->
@@ -273,6 +297,7 @@
         android:layout_marginStart="8dp"
         android:text="レジ"
         android:textSize="20sp"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_3"
         app:layout_constraintStart_toEndOf="@+id/text_view_3" />
 
@@ -282,6 +307,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="お会計:"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_20"
         app:layout_constraintStart_toEndOf="@+id/text_view_20" />
 
@@ -294,6 +320,7 @@
         android:ems="5"
         android:inputType="number"
         android:textSize="14sp"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_21"
         app:layout_constraintStart_toEndOf="@+id/text_view_21" />
 
@@ -303,6 +330,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:text="@string/yen"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Kaikei"
         app:layout_constraintStart_toEndOf="@+id/editTextNumber_Kaikei" />
 
@@ -315,7 +343,8 @@
         android:layout_width="wrap_content"
         android:layout_height="19dp"
         android:layout_marginStart="32dp"
-        android:text="00"
+        android:text="0"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Yukichi"
         app:layout_constraintStart_toEndOf="@+id/editTextNumber_Yukichi" />
 
@@ -323,7 +352,8 @@
         android:id="@+id/text_view_sheet_Ichiyo"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:text="00"
+        android:text="0"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Ichiyo"
         app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Yukichi" />
 
@@ -331,7 +361,8 @@
         android:id="@+id/text_view_sheet_Shurei"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:text="00"
+        android:text="0"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Shurei"
         app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Ichiyo" />
 
@@ -339,7 +370,8 @@
         android:id="@+id/text_view_sheet_Hideyo"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:text="00"
+        android:text="0"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Hideyo"
         app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Shurei" />
 
@@ -347,7 +379,8 @@
         android:id="@+id/text_view_sheet_Gomarumaru"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:text="00"
+        android:text="0"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Gomarumaru"
         app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Hideyo" />
 
@@ -355,7 +388,8 @@
         android:id="@+id/text_view_sheet_Hitomarumaru"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:text="00"
+        android:text="0"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Hitomarumaru"
         app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Gomarumaru" />
 
@@ -363,7 +397,8 @@
         android:id="@+id/text_view_sheet_Gomaru"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:text="00"
+        android:text="0"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Gomaru"
         app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Hitomarumaru" />
 
@@ -371,7 +406,8 @@
         android:id="@+id/text_view_sheet_Hitomaru"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:text="00"
+        android:text="0"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Hitomaru"
         app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Gomaru" />
 
@@ -379,7 +415,8 @@
         android:id="@+id/text_view_sheet_Go"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:text="00"
+        android:text="0"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Go"
         app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Hitomaru" />
 
@@ -387,7 +424,8 @@
         android:id="@+id/text_view_sheet_Hito"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:text="00"
+        android:text="0"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumber_Hito"
         app:layout_constraintEnd_toEndOf="@+id/text_view_sheet_Go" />
     <!-- 会計ユニット(終) -->
@@ -400,6 +438,7 @@
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:text="@string/sheet"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Yukichi"
         app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Yukichi" />
 
@@ -409,6 +448,7 @@
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:text="@string/sheet"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Ichiyo"
         app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Ichiyo" />
 
@@ -418,6 +458,7 @@
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:text="@string/sheet"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Shurei"
         app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Shurei" />
 
@@ -427,6 +468,7 @@
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:text="@string/sheet"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Hideyo"
         app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Hideyo" />
 
@@ -436,6 +478,7 @@
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:text="@string/sheet"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Gomarumaru"
         app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Gomarumaru" />
 
@@ -445,6 +488,7 @@
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:text="@string/sheet"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Hitomarumaru"
         app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Hitomarumaru" />
 
@@ -454,6 +498,7 @@
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:text="@string/sheet"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Gomaru"
         app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Gomaru" />
 
@@ -463,6 +508,7 @@
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:text="@string/sheet"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Hitomaru"
         app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Hitomaru" />
 
@@ -472,6 +518,7 @@
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:text="@string/sheet"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Go"
         app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Go" />
 
@@ -481,9 +528,41 @@
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
         android:text="@string/sheet"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Hito"
         app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Hito" />
     <!-- 会計"枚"表記(終) -->
+    <!-- 支払額(始) -->
+
+    <TextView
+        android:id="@+id/text_view_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="支払い:"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Yukichi2"
+        app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Yukichi2" />
+
+    <TextView
+        android:id="@+id/textView_shiharai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_30"
+        app:layout_constraintStart_toEndOf="@+id/text_view_30" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yen"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_shiharai"
+        app:layout_constraintStart_toEndOf="@+id/textView_shiharai" />
+    <!-- 支払額(終) -->
+
     <!-- おつり(始) -->
 
     <TextView
@@ -492,14 +571,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="おつり:"
-        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Yukichi2"
-        app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Yukichi2" />
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_view_sheet_Yukichi3"
+        app:layout_constraintStart_toEndOf="@+id/text_view_sheet_Yukichi3" />
 
     <TextView
         android:id="@+id/textView_tsuri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/text_view_17"
         app:layout_constraintStart_toEndOf="@+id/text_view_17" />
 
@@ -508,6 +589,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/yen"
+        android:textColor="@color/black"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_tsuri"
         app:layout_constraintStart_toEndOf="@+id/textView_tsuri" />
     <!-- おつり(終) -->

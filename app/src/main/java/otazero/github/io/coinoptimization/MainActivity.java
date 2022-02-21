@@ -1,17 +1,33 @@
 package otazero.github.io.coinoptimization;
 
 import androidx.appcompat.app.AppCompatActivity;
-        import android.os.Bundle;
+
+import android.content.Context;
+import android.os.Bundle;
         import android.widget.Button;
         import android.widget.EditText;
         import android.widget.TextView;
         import android.text.TextWatcher;
         import android.text.Editable;
+        import android.content.SharedPreferences;
 
 
 public class MainActivity extends AppCompatActivity implements TextWatcher{
 
-    /* example */
+    /* 保持値取得 */
+    /*
+    SharedPreferences data = getSharedPreferences("DataSave", Context.MODE_PRIVATE);
+    int yukichiS = data.getInt("Yukichi", 0);
+    int ichiyoS = data.getInt("Ichiyo", 0);
+    int shureiS = data.getInt("Shurei", 0);
+    int hideyoS = data.getInt("Hideyo", 0);
+    int gomarumaruS = data.getInt("Gomarumaru", 0);
+    int hitomarumaruS = data.getInt("Hitomarumaru", 0);
+    int gomaruS = data.getInt("Gomaru", 0);
+    int hitomaruS = data.getInt("Hitomaru", 0);
+    int goS = data.getInt("Go", 0);
+    int hitoS = data.getInt("Hito", 0);
+     */
 
 
     /* My create */
@@ -21,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher{
     private TextView[] textViewKaikei = new TextView[10];
     private TextView textViewTsuri;
     private TextView textViewShoji;
+    private TextView textViewShiharai;
 
     //通貨
     private int[] tmpKahei = {10000, 5000, 2000, 1000, 500, 100, 50, 10, 5, 1};
@@ -61,6 +78,8 @@ public class MainActivity extends AppCompatActivity implements TextWatcher{
 
         textViewTsuri = findViewById(R.id.textView_tsuri);
         textViewShoji = findViewById(R.id.text_view_shoji);
+
+        textViewShiharai = findViewById(R.id.textView_shiharai);
 
         //随時更新
         for (int i = 0; i < tmpKahei.length; i++){
@@ -105,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher{
             int shugoA01[] = new int[10];
             int shugoB01[] = new int[10];
             int otsuri = 0;
+            int shiharai = 0;
             for (int i = 0; i < tmpKahei.length; i++){
                 int count = 0;
                 for (int j = tmpKahei[i]; sumB >= j; sumB -= j){
@@ -122,10 +142,14 @@ public class MainActivity extends AppCompatActivity implements TextWatcher{
                 //おつり計算
                 otsuri += shugoB01[i] * tmpKahei[i];
 
+                //支払額計算
+                shiharai += shugoA01[i] * tmpKahei[i];
+
                 //支払い枚数出力
                 textViewKaikei[i].setText(String.valueOf(shugoA01[i]));
             }
             textViewTsuri.setText(String.valueOf(otsuri));
+            textViewShiharai.setText(String.valueOf(shiharai));
         });
     }
     @Override
@@ -136,20 +160,10 @@ public class MainActivity extends AppCompatActivity implements TextWatcher{
     }
     @Override
     public void afterTextChanged(Editable s) {
+
+
+
         // テキスト変更後に変更されたテキストを取り出す
-        /*String inputStr= s.toString();*/
-
-        // 文字長をカウントして８文字を超えると「オーバー」とする
-        /*
-        if(inputStr.length() >8){
-            String str = inputStr +" 文字数オーバー";
-            textViewShoji.setText(str);
-        }
-        else{
-            textViewShoji.setText(inputStr);
-        }
-
-         */
         int sumA = 0;
         String[] strHenkan = new String[10];
         int shugoA[] = new int[10];
@@ -164,5 +178,23 @@ public class MainActivity extends AppCompatActivity implements TextWatcher{
             sumA += shugoA[i] * tmpKahei[i];
         }
         textViewShoji.setText(String.valueOf(sumA));
+
+
+        /* 値保持 */
+        /*
+        SharedPreferences data = getSharedPreferences("DataSave", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = data.edit();
+        editor.putInt("Yukichi", shugoA[0]);
+        editor.putInt("Ichiyo", shugoA[1]);
+        editor.putInt("Shurei", shugoA[2]);
+        editor.putInt("Hideyo", shugoA[3]);
+        editor.putInt("Gomarumaru", shugoA[4]);
+        editor.putInt("Hitomarumaru", shugoA[5]);
+        editor.putInt("Gomaru", shugoA[6]);
+        editor.putInt("Hitomaru", shugoA[7]);
+        editor.putInt("Go", shugoA[8]);
+        editor.putInt("Hito", shugoA[9]);
+        editor.apply();
+        */
     }
 }
